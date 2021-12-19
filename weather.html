@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News-Letter</title>
+    <script src="javascript/javascript_for_news.js"></script>
+</head>
+<body>
+<!--navbar-->
+    <nav class="navbar  navbar-light bg-light rounded fixed-top">
+      <div class="conatiner-fluid">
+        <a class="navbar-brand" href="index.html"><img src="images\logo.ico"> News-Letter</a>
+      </div>
+        <ul class="nav justify-content-end ">
+            <li class="nav-item">
+                <a class="nav-link active btn btn-primary py-1" aria-current="page" href="states.html">Cowin-api</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active btn btn-primary py-1" href="weather.html">News-api</a>
+            </li>
+        </ul>
+    </nav>   
+<!--home completed-->
+<!--weather forecasting-->
+    <div id ="weather" class="block-1 py-5 text-center">
+        <img class="img " src="images/global-warming.png" alt="weather" >                   <!--weather forecasting api endpoints-->
+        <h1 class="py-5">Weather Forecaste</h1>  
+        <script src="javascript/javascript_for_news.js"></script>  
+        <div class="input-group mb-6 text-center container">
+            <input id="location" type="text" class="form-control" placeholder="city" aria-label="Recipient's username" aria-describedby="button-addon2" name="city">
+            <a id="submit" href="#weather_forecate_result" onclick="weather()" class="btn btn-outline-secondary block-3">search!</a>
+        </div>
+    </div>
+    <script>
+        function weather(){
+            if(document.getElementById('location').value!=''){
+                var city =document.getElementById('location').value;
+                weather_forecaste(city);
+                city =""
+            }
+            else{
+                alert('no city selected')
+            }
+        }
+    </script>  
+    <div class="block-1" >
+        <div id="weather_forecate_result" class="block-3 container" style="color:grey;"></div>
+    </div>
+<!--weather forcasting completed-->
+<!--scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/web_app_css.css">
+</body>
+</html>
